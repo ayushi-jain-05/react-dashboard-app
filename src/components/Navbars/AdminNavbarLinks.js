@@ -35,8 +35,8 @@ export default function HeaderLinks(props) {
   const settingsRef = React.useRef();
   return (
     <Flex
-      pe={{ sm: "0px", md: "16px" }}
-      w={{ sm: "100%", md: "auto" }}
+      pe={{ base: "0px", md: "16px" }}
+      w={{ base: "auto", md: "auto" }}
       alignItems="center"
       flexDirection="row"
     >
@@ -44,11 +44,11 @@ export default function HeaderLinks(props) {
         cursor="pointer"
         bg={inputBg}
         borderRadius="15px"
+        display={{ base: "none", md: "flex" }}
         w={{
-          sm: "128px",
           md: "200px",
         }}
-        me={{ sm: "auto", md: "20px" }}
+        me={{ md: "20px" }}
         _focus={{
           borderColor: { mainTeal },
         }}
@@ -82,16 +82,9 @@ export default function HeaderLinks(props) {
           borderRadius="inherit"
         />
       </InputGroup>
-      <SidebarResponsive
-        logoText={props.logoText}
-        secondary={props.secondary}
-        routes={routes}
-        // logo={logo}
-        {...rest}
-      />
       <Button
         variant="ghost"
-        ms={{ base: "16px", xl: "0px" }}
+        display={{ base: "none", md: "flex" }}
         me="16px"
         leftIcon={<PersonIcon color={navbarIcon} w="18px" h="18px" />}
         color={navbarIcon}
@@ -106,7 +99,7 @@ export default function HeaderLinks(props) {
       </Button>
       <SettingsIcon
         cursor="pointer"
-        ms={{ base: "16px", xl: "0px" }}
+        display={{ base: "none", md: "block" }}
         me="16px"
         ref={settingsRef}
         onClick={() => history.push('/admin/dashboard')}
@@ -116,10 +109,18 @@ export default function HeaderLinks(props) {
       />
       <BellIcon
         cursor="pointer"
+        display={{ base: "none", md: "block" }}
         color={navbarIcon}
+        me={{ base: "0px", md: "16px" }}
         w="18px"
         h="18px"
         onClick={() => history.push('/admin/dashboard')}
+      />
+      <SidebarResponsive
+        logoText={props.logoText}
+        secondary={props.secondary}
+        routes={routes}
+        {...rest}
       />
     </Flex>
   );

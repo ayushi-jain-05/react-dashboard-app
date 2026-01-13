@@ -101,12 +101,13 @@ export default function AdminNavbar(props) {
       <Flex
         w="100%"
         flexDirection={{
-          sm: "column",
+          base: "row",
           md: "row",
         }}
-        alignItems={{ xl: "center" }}
+        alignItems="center"
+        justifyContent="space-between"
       >
-        <Box mb={{ sm: "8px", md: "0px" }}>
+        <Box mb={{ base: "0px", md: "0px" }}>
           <Breadcrumb>
             <BreadcrumbItem color={navbarStyles.mainText}>
               <BreadcrumbLink href="#" color={navbarStyles.secondaryText}>
@@ -140,7 +141,7 @@ export default function AdminNavbar(props) {
             {brandText}
           </Link>
         </Box>
-        <Box ms="auto" w={{ sm: "100%", md: "unset" }}>
+        <Box ms="auto" w={{ base: "auto", md: "unset" }}>
           <AdminNavbarLinks
             onOpen={props.onOpen}
             logoText={props.logoText}
