@@ -46,7 +46,7 @@ src/
 │   ├── Footer/       # Page footer
 │   ├── Icons/        # Custom icon components
 │   ├── Layout/       # Layout wrapper components
-│   ├── Modal/        # Reusable modal components
+│   ├── Modal/        # Reusable modals (Settings, Avatar, Notifications)
 │   ├── Navbars/      # Navigation bars
 │   ├── Separator/    # Visual divider
 │   ├── Sidebar/      # Sidebar navigation
