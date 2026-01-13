@@ -6,7 +6,6 @@ import {
   Grid,
   Icon,
   Text,
-  useColorModeValue,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -71,8 +70,7 @@ const Projects = ({ title, description }) => {
   });
   const toast = useToast();
 
-  // Chakra color mode
-  const textColor = useColorModeValue("gray.700", "white");
+  const textColor = "gray.700";
 
   const handleCreateProject = useCallback(() => {
     if (newProject.name && newProject.category) {

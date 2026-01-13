@@ -8,7 +8,6 @@ import {
   Flex,
   Image,
   Text,
-  useColorModeValue,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -20,8 +19,7 @@ import React from "react";
 
 const ProjectCard = ({ image, name, category, avatars, description }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  // Chakra color mode
-  const textColor = useColorModeValue("gray.700", "white");
+  const textColor = "gray.700";
 
   return (
     <>

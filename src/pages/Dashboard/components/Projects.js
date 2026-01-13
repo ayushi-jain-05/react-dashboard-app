@@ -8,7 +8,6 @@ import {
   Th,
   Thead,
   Tr,
-  useColorModeValue,
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -18,7 +17,7 @@ import React from "react";
 import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
 const Projects = ({ title, amount, captions, data }) => {
-  const textColor = useColorModeValue("gray.700", "white");
+  const textColor = "gray.700";
 
   return (
     <Card p='16px' overflowX={{ sm: "scroll", xl: "hidden" }}>

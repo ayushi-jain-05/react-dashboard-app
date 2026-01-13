@@ -87,7 +87,6 @@ src/
 | `useDisclosure` | Modal open/close state (Chakra UI) |
 | `useToast` | Notification feedback (Chakra UI) |
 | `useHistory` | Programmatic navigation |
-| `useColorModeValue` | Theme color switching |
 
 ## Assumptions
 

@@ -4,7 +4,6 @@ import {
   Button,
   Flex,
   Text,
-  useColorModeValue,
   useToast,
   Modal,
   ModalOverlay,
@@ -62,8 +61,7 @@ const Conversations = ({ title }) => {
   const [replyText, setReplyText] = useState("");
   const toast = useToast();
 
-  // Chakra color mode
-  const textColor = useColorModeValue("gray.700", "white");
+  const textColor = "gray.700";
 
   // Memoized handlers
   const handleReplyClick = useCallback((conversation) => {

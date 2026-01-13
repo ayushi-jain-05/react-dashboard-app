@@ -1,5 +1,5 @@
 // Chakra imports
-import { Flex, Icon, Link, Text, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Icon, Link, Text } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
@@ -15,8 +15,7 @@ const ProfileInformation = ({
   email,
   location,
 }) => {
-  // Chakra color mode
-  const textColor = useColorModeValue("gray.700", "white");
+  const textColor = "gray.700";
 
   return (
     <Card p='16px' my={{ sm: "24px", xl: "0px" }}>

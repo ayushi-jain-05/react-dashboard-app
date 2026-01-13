@@ -5,7 +5,6 @@ import {
   StatHelpText,
   StatLabel,
   StatNumber,
-  useColorModeValue,
 } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
@@ -14,8 +13,8 @@ import IconBox from "components/Icons/IconBox";
 import React from "react";
 
 const MiniStatistics = ({ title, amount, percentage, icon }) => {
-  const iconTeal = useColorModeValue("teal.300", "teal.300");
-  const textColor = useColorModeValue("gray.700", "white");
+  const iconTeal = "teal.300";
+  const textColor = "gray.700";
 
   return (
     <Card minH='83px'>

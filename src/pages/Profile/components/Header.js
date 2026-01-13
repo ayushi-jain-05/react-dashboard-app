@@ -6,7 +6,6 @@ import {
   Flex,
   Icon,
   Text,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useState, useCallback } from "react";
 import { FaPencilAlt } from "react-icons/fa";
@@ -22,13 +21,9 @@ const Header = ({
 }) => {
   const [activeTab, setActiveTab] = useState(0);
 
-  // Chakra color mode
-  const textColor = useColorModeValue("gray.700", "white");
-  const borderProfileColor = useColorModeValue(
-    "white",
-    "rgba(255, 255, 255, 0.31)"
-  );
-  const emailColor = useColorModeValue("gray.400", "gray.300");
+  const textColor = "gray.700";
+  const borderProfileColor = "white";
+  const emailColor = "gray.400";
 
   // Memoized tab click handler
   const handleTabClick = useCallback((index) => {

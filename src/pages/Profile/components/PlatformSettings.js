@@ -1,5 +1,5 @@
 // Chakra imports
-import { Box, Flex, Icon, Switch, Text, useColorModeValue, useToast } from "@chakra-ui/react";
+import { Box, Flex, Icon, Switch, Text, useToast } from "@chakra-ui/react";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 // Custom components
 import Card from "components/Card/Card";
@@ -34,8 +34,7 @@ const PlatformSettings = ({ title, subtitle1, subtitle2 }) => {
 
   const [settings, setSettings] = useState(initialSettings);
 
-  // Chakra color mode
-  const textColor = useColorModeValue("gray.700", "white");
+  const textColor = "gray.700";
 
   // Memoized toggle handler
   const handleToggle = useCallback((settingId, label) => {

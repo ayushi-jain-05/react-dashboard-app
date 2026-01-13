@@ -1,5 +1,5 @@
 // Chakra imports
-import { Flex, Icon, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react";
+import { Flex, Icon, SimpleGrid, Text } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
@@ -14,8 +14,8 @@ import ChartStatistics from "./ChartStatistics";
 import { ReactComponent as StatIconSvg } from "assets/svg/statIcon.svg";
 
 const ActiveUsers = ({ title, percentage, chart }) => {
-  const iconBoxInside = useColorModeValue("white", "white");
-  const textColor = useColorModeValue("gray.700", "white");
+  const iconBoxInside = "white";
+  const textColor = "gray.700";
   return (
     <Card p='16px'>
       <CardBody>

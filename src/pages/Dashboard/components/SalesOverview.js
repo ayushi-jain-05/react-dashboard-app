@@ -1,12 +1,12 @@
 // Chakra imports
-import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 // Custom components
 import Card from "components/Card/Card.js";
 import CardHeader from "components/Card/CardHeader.js";
 import React from "react";
 
 const SalesOverview = ({ title, percentage, chart }) => {
-  const textColor = useColorModeValue("gray.700", "white");
+  const textColor = "gray.700";
   return (
     <Card p='28px 10px 16px 0px' mb={{ sm: "26px", lg: "0px" }}>
       <CardHeader mb='20px' pl='22px'>

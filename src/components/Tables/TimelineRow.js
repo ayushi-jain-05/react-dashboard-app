@@ -1,10 +1,10 @@
-import { Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Icon, Text } from "@chakra-ui/react";
 import React from "react";
 
 function TimelineRow(props) {
   const { logo, title, date, color, index, arrLength } = props;
-  const textColor = useColorModeValue("gray.700", "white.300");
-  const bgIconColor = useColorModeValue("white.300", "gray.700");
+  const textColor = "gray.700";
+  const bgIconColor = "white";
 
   return (
     <Flex alignItems="center" minH="78px" justifyContent="start" mb="5px">

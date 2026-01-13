@@ -7,8 +7,7 @@ import {
     Image,
     Link,
     Stack,
-    Text,
-    useColorModeValue
+    Text
 } from "@chakra-ui/react";
 import IconBox from "components/Icons/IconBox";
 import { Separator } from "components/Separator/Separator";
@@ -28,11 +27,10 @@ const SidebarContent = ({ logoText, routes }) => {
     return location.pathname === routeName ? "active" : "";
   };
   const createLinks = (routes) => {
-    // Chakra Color Mode
-    const activeBg = useColorModeValue("white", "gray.700");
-    const inactiveBg = useColorModeValue("white", "gray.700");
-    const activeColor = useColorModeValue("gray.700", "white");
-    const inactiveColor = useColorModeValue("gray.400", "gray.400");
+    const activeBg = "white";
+    const inactiveBg = "white";
+    const activeColor = "gray.700";
+    const inactiveColor = "gray.400";
 
     return routes.map((prop, key) => {
       if (prop.redirect) {

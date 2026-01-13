@@ -5,7 +5,6 @@ import {
   Icon,
   Spacer,
   Text,
-  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 // Custom components
@@ -17,7 +16,7 @@ import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 
 const BuiltByDevelopers = ({ title, name, description, image }) => {
-  const textColor = useColorModeValue("gray.700", "white");
+  const textColor = "gray.700";
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (

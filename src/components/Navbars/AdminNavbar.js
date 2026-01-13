@@ -6,7 +6,6 @@ import {
   BreadcrumbLink,
   Flex,
   Link,
-  useColorModeValue,
 } from "@chakra-ui/react";
 import PropTypes from "prop-types";
 import React, { useState, useEffect, useMemo } from "react";
@@ -16,9 +15,8 @@ export default function AdminNavbar(props) {
   const [scrolled, setScrolled] = useState(false);
   const { brandText } = props;
 
-  // Color mode values
-  const mainTextLight = useColorModeValue("gray.700", "gray.200");
-  const secondaryTextColor = useColorModeValue("gray.400", "gray.200");
+  const mainTextLight = "gray.700";
+  const secondaryTextColor = "gray.400";
 
   // Handle scroll event with proper cleanup
   useEffect(() => {

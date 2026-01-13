@@ -8,7 +8,6 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  useColorModeValue,
 } from "@chakra-ui/react";
 // Custom Icons
 import { PersonIcon, SettingsIcon } from "components/Icons/Icons";
@@ -22,12 +21,12 @@ export default function HeaderLinks(props) {
   const { secondary, ...rest } = props;
   const history = useHistory();
 
-  // Chakra Color Mode
-  let mainTeal = useColorModeValue("teal.300", "teal.300");
-  let inputBg = useColorModeValue("white", "gray.800");
-  let mainText = useColorModeValue("gray.700", "gray.200");
-  let navbarIcon = useColorModeValue("gray.500", "gray.200");
-  let searchIcon = useColorModeValue("gray.700", "gray.200");
+  // Color values
+  const mainTeal = "teal.300";
+  const inputBg = "white";
+  let mainText = "gray.700";
+  let navbarIcon = "gray.500";
+  const searchIcon = "gray.700";
 
   if (secondary) {
     navbarIcon = "white";

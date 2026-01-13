@@ -14,7 +14,6 @@ import {
     Link,
     Stack,
     Text,
-    useColorModeValue,
     useDisclosure
 } from "@chakra-ui/react";
 import IconBox from "components/Icons/IconBox";
@@ -33,11 +32,10 @@ function SidebarResponsive(props) {
     };
   
     const createLinks = (routes) => {
-      // Chakra Color Mode
-      const activeBg = useColorModeValue("white", "gray.700");
-      const inactiveBg = useColorModeValue("white", "gray.700");
-      const activeColor = useColorModeValue("gray.700", "white");
-      const inactiveColor = useColorModeValue("gray.400", "gray.400");
+      const activeBg = "white";
+      const inactiveBg = "white";
+      const activeColor = "gray.700";
+      const inactiveColor = "gray.400";
   
       return routes.map((prop, key) => {
         if (prop.redirect) {
@@ -178,12 +176,7 @@ function SidebarResponsive(props) {
     const { logoText, routes, ...rest } = props;
   
     var links = <>{createLinks(routes)}</>;
-    //  BRAND
-    //  Chakra Color Mode
-    let hamburgerColor = useColorModeValue("gray.500", "gray.200");
-    if (props.secondary === true) {
-      hamburgerColor = "white";
-    }
+    let hamburgerColor = props.secondary ? "white" : "gray.500";
     var brand = (
       <Box pt={"35px"} mb="8px">
         <Link
