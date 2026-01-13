@@ -1,5 +1,6 @@
 // Chakra imports
-import { Flex, Switch, Text, useColorModeValue, useToast } from "@chakra-ui/react";
+import { Box, Flex, Icon, Switch, Text, useColorModeValue, useToast } from "@chakra-ui/react";
+import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
@@ -41,12 +42,36 @@ const PlatformSettings = ({ title, subtitle1, subtitle2 }) => {
     setSettings(prev => {
       const newValue = !prev[settingId];
       toast({
-        title: `Setting ${newValue ? 'enabled' : 'disabled'}`,
-        description: label,
-        status: newValue ? 'success' : 'info',
-        duration: 2000,
-        isClosable: true,
         position: 'top-right',
+        duration: 2500,
+        isClosable: true,
+        render: () => (
+          <Box
+            bg={newValue ? 'teal.300' : 'gray.600'}
+            color='white'
+            px='24px'
+            py='14px'
+            borderRadius='12px'
+            boxShadow='0 4px 12px rgba(0, 0, 0, 0.15)'
+          >
+            <Flex align='center'>
+              <Icon
+                as={newValue ? FaCheckCircle : FaTimesCircle}
+                w='18px'
+                h='18px'
+                me='12px'
+              />
+              <Box>
+                <Text fontWeight='bold' fontSize='sm'>
+                  {newValue ? 'Enabled' : 'Disabled'}
+                </Text>
+                <Text fontSize='xs' opacity='0.9'>
+                  {label}
+                </Text>
+              </Box>
+            </Flex>
+          </Box>
+        ),
       });
       return { ...prev, [settingId]: newValue };
     });
@@ -55,10 +80,14 @@ const PlatformSettings = ({ title, subtitle1, subtitle2 }) => {
   const renderSettingItem = useCallback((setting) => (
     <Flex align='center' mb='20px' key={setting.id}>
       <Switch
-        colorScheme='teal'
         me='10px'
         isChecked={settings[setting.id]}
         onChange={() => handleToggle(setting.id, setting.label)}
+        sx={{
+          "span.chakra-switch__track[data-checked]": {
+            backgroundColor: "teal.300",
+          },
+        }}
       />
       <Text noOfLines={1} fontSize='md' color='gray.500' fontWeight='400'>
         {setting.label}

@@ -7,6 +7,7 @@ import {
   StatsIcon,
   CreditIcon,
   PersonIcon,
+  SupportIcon
 } from "components/Icons/Icons";
 
 var dashRoutes = [
@@ -28,6 +29,13 @@ var dashRoutes = [
     path: "/billing",
     name: "Billing",
     icon: <CreditIcon color="inherit" />,
+    component: Dashboard, // Redirects to Dashboard
+    layout: "/admin",
+  },
+  {
+    path: "/rtl",
+    name: "RTL",
+    icon: <SupportIcon color="inherit" />,
     component: Dashboard, // Redirects to Dashboard
     layout: "/admin",
   },

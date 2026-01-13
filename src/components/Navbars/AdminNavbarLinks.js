@@ -2,6 +2,7 @@
 import { BellIcon, SearchIcon } from "@chakra-ui/icons";
 // Chakra Imports
 import {
+  Button,
   Flex,
   IconButton,
   Input,
@@ -10,7 +11,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 // Custom Icons
-import { SettingsIcon } from "components/Icons/Icons";
+import { PersonIcon, SettingsIcon } from "components/Icons/Icons";
 import SidebarResponsive from "components/Sidebar/SidebarResponsive";
 import PropTypes from "prop-types";
 import React from "react";
@@ -89,6 +90,21 @@ export default function HeaderLinks(props) {
         // logo={logo}
         {...rest}
       />
+      <Button
+        variant="ghost"
+        ms={{ base: "16px", xl: "0px" }}
+        me="16px"
+        leftIcon={<PersonIcon color={navbarIcon} w="18px" h="18px" />}
+        color={navbarIcon}
+        fontSize="sm"
+        fontWeight="normal"
+        _hover={{ bg: "transparent" }}
+        _active={{ bg: "transparent" }}
+        _focus={{ boxShadow: "none" }}
+        onClick={() => history.push('/admin/profile')}
+      >
+        Sign In
+      </Button>
       <SettingsIcon
         cursor="pointer"
         ms={{ base: "16px", xl: "0px" }}

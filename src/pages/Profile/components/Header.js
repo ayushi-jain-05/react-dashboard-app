@@ -4,10 +4,12 @@ import {
   Box,
   Button,
   Flex,
+  Icon,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import React, { useState, useCallback } from "react";
+import { FaPencilAlt } from "react-icons/fa";
 
 const Header = ({
   backgroundHeader,
@@ -40,9 +42,8 @@ const Header = ({
   const getTabStyle = useCallback((index) => {
     if (activeTab === index) {
       return {
-        bg: 'hsla(0,0%,100%,.3)',
-        boxShadow: 'inset 0 0 1px 1px hsl(0deg 0% 100% / 90%), 0 20px 27px 0 rgb(0 0 0 / 5%)',
-        border: '1px solid gray.200',
+        bg: 'white',
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
       };
     }
     return {
@@ -97,13 +98,32 @@ const Header = ({
             direction={{ sm: "column", md: "row" }}
             w={{ sm: "100%" }}
             textAlign={{ sm: "center", md: "start" }}>
-            <Avatar
-              me={{ md: "22px" }}
-              src={avatarImage}
-              w='80px'
-              h='80px'
-              borderRadius='15px'
-            />
+            <Box position='relative' me={{ md: "22px" }}>
+              <Avatar
+                src={avatarImage}
+                w='80px'
+                h='80px'
+                borderRadius='15px'
+              />
+              <Box
+                position='absolute'
+                bottom='-3px'
+                right='-3px'
+                bg='white'
+                borderRadius='5px'
+                w='24px'
+                h='24px'
+                display='flex'
+                alignItems='center'
+                justifyContent='center'
+                boxShadow='0 2px 5px rgba(0,0,0,0.2)'
+                cursor='pointer'
+                _hover={{ transform: 'scale(1.1)' }}
+                transition='all 0.2s'
+              >
+                <Icon as={FaPencilAlt} color='teal.300' w='8px' h='8px' />
+              </Box>
+            </Box>
             <Flex direction='column' maxWidth='100%' my={{ sm: "14px" }}>
               <Text
                 fontSize={{ sm: "lg", lg: "xl" }}

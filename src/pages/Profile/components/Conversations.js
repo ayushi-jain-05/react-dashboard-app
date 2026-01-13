@@ -76,7 +76,7 @@ const Conversations = ({ title }) => {
     if (replyText.trim()) {
       toast({
         title: "Reply Sent",
-        description: `Your reply to ${selectedConversation.name} has been sent.`,
+        description: `Replied to ${selectedConversation.name}.`,
         status: "success",
         duration: 3000,
         isClosable: true,
@@ -143,32 +143,75 @@ const Conversations = ({ title }) => {
       </Card>
 
       {/* Reply Modal */}
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>
-            Reply to {selectedConversation?.name}
+      <Modal isOpen={isOpen} onClose={onClose} isCentered size='md'>
+        <ModalOverlay bg='blackAlpha.300' backdropFilter='blur(5px)' />
+        <ModalContent borderRadius='20px' p='10px'>
+          <ModalHeader pb='0'>
+            <Flex align='center'>
+              <Avatar
+                src={selectedConversation?.avatar}
+                w='45px'
+                h='45px'
+                borderRadius='12px'
+                me='12px'
+              />
+              <Flex direction='column'>
+                <Text fontSize='md' color={textColor} fontWeight='bold'>
+                  {selectedConversation?.name}
+                </Text>
+                <Text fontSize='xs' color='gray.400' fontWeight='normal'>
+                  Reply to conversation
+                </Text>
+              </Flex>
+            </Flex>
           </ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Text fontSize='sm' color='gray.500' mb='10px'>
-              Original message: "{selectedConversation?.message}"
-            </Text>
+          <ModalCloseButton top='20px' right='20px' />
+          <ModalBody pt='20px'>
+            <Flex
+              bg='gray.50'
+              borderRadius='12px'
+              p='12px'
+              mb='15px'
+              borderLeft='3px solid'
+              borderLeftColor='teal.300'
+            >
+              <Text fontSize='sm' color='gray.600' fontStyle='italic'>
+                "{selectedConversation?.message}"
+              </Text>
+            </Flex>
             <Textarea
-              placeholder='Type your reply here...'
+              placeholder='Write your reply...'
               value={replyText}
               onChange={handleTextChange}
               rows={4}
+              borderRadius='12px'
+              borderColor='gray.200'
+              _focus={{
+                borderColor: 'teal.300',
+                boxShadow: '0 0 0 1px teal.300',
+              }}
+              resize='none'
             />
           </ModalBody>
-          <ModalFooter>
-            <Button variant='ghost' mr={3} onClick={onClose}>
+          <ModalFooter pt='10px'>
+            <Button
+              variant='ghost'
+              mr={3}
+              onClick={onClose}
+              borderRadius='10px'
+              color='gray.500'
+            >
               Cancel
             </Button>
             <Button
-              colorScheme='teal'
+              bg='teal.300'
+              color='white'
               onClick={handleSendReply}
               isDisabled={!replyText.trim()}
+              borderRadius='10px'
+              _hover={{ bg: 'teal.400' }}
+              _active={{ bg: 'teal.500' }}
+              px='25px'
             >
               Send Reply
             </Button>
