@@ -7,7 +7,7 @@ import React, { useCallback } from "react";
 export function SidebarHelp() {
   const handleDocumentationClick = useCallback(() => {
     window.open(
-      "https://github.com/user/react-dashboard-app#readme",
+      "https://github.com/ayushi-jain-05/react-dashboard-app#readme",
       "_blank",
       "noopener,noreferrer"
     );
