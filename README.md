@@ -116,7 +116,7 @@ src/
     - "Create a New Project" button opens a form modal
     - New projects are added to the list dynamically (state-managed)
     - Project avatars are placeholder images
-11. **Profile Avatar Edit Icon**: Visible but no file upload functionality (decorative)
+11. **Profile Avatar Edit Icon**: Opens modal to upload new profile photo (client-side preview only, no backend upload)
 
 ### Dashboard Page
 12. **Statistics Cards**: Display static mock data

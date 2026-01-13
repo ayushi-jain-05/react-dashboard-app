@@ -175,10 +175,10 @@ export default function HeaderLinks(props) {
       </Button>
 
       {/* Settings Icon with Modal */}
-      <Box
-        display={{ base: "none", md: "block" }}
+      <Flex
+        display={{ base: "none", md: "flex" }}
+        alignItems="center"
         me="16px"
-        position="relative"
       >
         <Icon
           as={FaCog}
@@ -190,18 +190,19 @@ export default function HeaderLinks(props) {
           _hover={{ color: 'teal.300' }}
           transition="all 0.2s"
         />
-      </Box>
+      </Flex>
 
       {/* Notifications Menu */}
       <Menu>
         <MenuButton
-          display={{ base: "none", md: "block" }}
-          me={{ base: "0px", md: "16px" }}
-          position="relative"
+          as={Flex}
+          display={{ base: "none", md: "flex" }}
+          alignItems="center"
+          me="16px"
+          cursor="pointer"
         >
           <Box position="relative">
             <BellIcon
-              cursor="pointer"
               color={navbarIcon}
               w="18px"
               h="18px"
@@ -211,17 +212,18 @@ export default function HeaderLinks(props) {
             {unreadCount > 0 && (
               <Badge
                 position="absolute"
-                top="-8px"
+                top="-6px"
                 right="-8px"
                 bg="red.500"
                 color="white"
                 borderRadius="full"
-                fontSize="10px"
-                w="16px"
-                h="16px"
+                fontSize="9px"
+                minW="14px"
+                h="14px"
                 display="flex"
                 alignItems="center"
                 justifyContent="center"
+                lineHeight="1"
               >
                 {unreadCount}
               </Badge>
