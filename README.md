@@ -90,11 +90,40 @@ src/
 
 ## Assumptions
 
+### General
 1. Data is mocked using static arrays (no backend required)
 2. Form submissions trigger toast notifications (no API calls)
 3. Sidebar items Tables, Billing, RTL redirect to Dashboard page
 4. Only Dashboard and Profile pages are fully functional
 5. All interactive elements (toggles, buttons, modals) are working
+
+### Navbar (Header)
+6. **Navbar icons functionality** (not specified in Figma, implemented based on interactive appearance):
+   - Bell icon: Opens notifications dropdown with mock notifications (marks as read on click)
+   - Settings icon: Opens settings modal with toggle preferences
+   - Sign In button: Navigates to Profile page
+   - Search input: UI only (no search functionality implemented)
+
+### Profile Page
+7. **Profile Header Tabs** (Overview, Teams, Projects): Switch active state visually; content sections remain static as the design shows the same layout for all tabs
+8. **Platform Settings**: All toggle switches are functional with toast notifications on state change
+9. **Conversations Section**:
+   - "REPLY" button opens a modal with the conversation context
+   - Reply submission shows success toast (no actual message sending)
+   - Conversations list uses mock data with placeholder avatars
+10. **Projects Section**:
+    - "VIEW ALL" button opens a modal with project details
+    - "Create a New Project" button opens a form modal
+    - New projects are added to the list dynamically (state-managed)
+    - Project avatars are placeholder images
+11. **Profile Avatar Edit Icon**: Visible but no file upload functionality (decorative)
+
+### Dashboard Page
+12. **Statistics Cards**: Display static mock data
+13. **Charts**: Interactive ApexCharts with hover tooltips
+14. **Projects Table**: Rendered dynamically from mock data array
+15. **Orders Timeline**: Rendered dynamically from mock data array
+16. **"Read more" link**: Opens a modal with additional information
 
 ## Responsive Design
 
