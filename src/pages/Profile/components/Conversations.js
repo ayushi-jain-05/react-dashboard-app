@@ -19,9 +19,9 @@ import {
 // Assets
 import avatar11 from "assets/img/avatars/avatar11.png";
 import avatar12 from "assets/img/avatars/avatar12.png";
-import avatar4 from "assets/img/avatars/avatar4.png";
 import avatar13 from "assets/img/avatars/avatar13.png";
-import avatar6 from "assets/img/avatars/avatar6.png";
+import avatar14 from "assets/img/avatars/avatar14.png";
+
 // Custom components
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
@@ -33,7 +33,7 @@ const conversationsData = [
   {
     id: 1,
     name: "Esthera Jackson",
-    avatar: avatar4,
+    avatar: avatar14,
     message: "Hi! I need more information...",
   },
   {
@@ -110,6 +110,7 @@ const Conversations = ({ title }) => {
                     h='50px'
                     borderRadius='15px'
                     me='10px'
+                    bg='transparent'
                   />
                   <Flex direction='column'>
                     <Text fontSize='sm' color={textColor} fontWeight='bold'>
@@ -154,6 +155,7 @@ const Conversations = ({ title }) => {
                 h='45px'
                 borderRadius='12px'
                 me='12px'
+                bg='teal.300'
               />
               <Flex direction='column'>
                 <Text fontSize='md' color={textColor} fontWeight='bold'>

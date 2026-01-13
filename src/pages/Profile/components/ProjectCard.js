@@ -6,7 +6,6 @@ import {
   Box,
   Button,
   Flex,
-  Icon,
   Image,
   Text,
   useColorModeValue,
@@ -16,10 +15,8 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
-  Progress,
 } from "@chakra-ui/react";
 import React from "react";
-import { FaUsers, FaCalendarAlt, FaCheckCircle } from "react-icons/fa";
 
 const ProjectCard = ({ image, name, category, avatars, description }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();

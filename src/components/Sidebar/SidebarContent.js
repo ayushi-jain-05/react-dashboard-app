@@ -1,7 +1,9 @@
 // chakra imports
 import {
     Box,
-    Button, Flex,
+    Button,
+    Flex,
+    Icon,
     Image,
     Link,
     Stack,
@@ -18,11 +20,8 @@ import { NavLink, useLocation } from "react-router-dom";
 
 
 const SidebarContent = ({ logoText, routes }) => {
-
-    // to check for active links and opened collapses
+  // to check for active links and opened collapses
   let location = useLocation();
-  // this is for the rest of the collapses
-  const [state, setState] = React.useState({});
 
   // verifies if routeName is the one active (in browser input)
   const activeRoute = (routeName) => {
@@ -40,8 +39,6 @@ const SidebarContent = ({ logoText, routes }) => {
         return null;
       }
       if (prop.category) {
-        var st = {};
-        st[prop["state"]] = !state[prop.state];
         return (
           <div key={prop.name}>
             <Text

@@ -46,6 +46,7 @@ src/
 │   ├── Footer/       # Page footer
 │   ├── Icons/        # Custom icon components
 │   ├── Layout/       # Layout wrapper components
+│   ├── Modal/        # Reusable modal components
 │   ├── Navbars/      # Navigation bars
 │   ├── Separator/    # Visual divider
 │   ├── Sidebar/      # Sidebar navigation
@@ -92,7 +93,7 @@ src/
 
 1. Data is mocked using static arrays (no backend required)
 2. Form submissions trigger toast notifications (no API calls)
-3. Sidebar items Tables, Billing redirect to Dashboard page
+3. Sidebar items Tables, Billing, RTL redirect to Dashboard page
 4. Only Dashboard and Profile pages are fully functional
 5. All interactive elements (toggles, buttons, modals) are working
 

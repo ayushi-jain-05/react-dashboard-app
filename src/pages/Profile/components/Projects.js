@@ -23,7 +23,6 @@ import avatar1 from "assets/img/avatars/avatar1.png";
 import avatar2 from "assets/img/avatars/avatar2.png";
 import avatar3 from "assets/img/avatars/avatar3.png";
 import avatar4 from "assets/img/avatars/avatar4.png";
-import avatar6 from "assets/img/avatars/avatar6.png";
 import imageArchitect1 from "assets/img/ImageArchitect1.png";
 import imageArchitect2 from "assets/img/ImageArchitect2.png";
 import imageArchitect3 from "assets/img/ImageArchitect3.png";

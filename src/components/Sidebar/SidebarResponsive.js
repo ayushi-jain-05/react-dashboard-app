@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import { HamburgerIcon } from "@chakra-ui/icons";
 // chakra imports
 import {
@@ -10,6 +9,7 @@ import {
     DrawerContent,
     DrawerOverlay,
     Flex,
+    Icon,
     Image,
     Link,
     Stack,
@@ -26,8 +26,6 @@ import { NavLink, useLocation } from "react-router-dom";
 function SidebarResponsive(props) {
     // to check for active links and opened collapses
     let location = useLocation();
-    // this is for the rest of the collapses
-    const [state, setState] = React.useState({});
     const mainPanel = React.useRef();
     // verifies if routeName is the one active (in browser input)
     const activeRoute = (routeName) => {
@@ -46,8 +44,6 @@ function SidebarResponsive(props) {
           return null;
         }
         if (prop.category) {
-          var st = {};
-          st[prop["state"]] = !state[prop.state];
           return (
             <div key={prop.name}>
               <Text

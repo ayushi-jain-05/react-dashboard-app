@@ -19,7 +19,7 @@ import { useHistory } from "react-router-dom";
 import routes from "routes.js";
 
 export default function HeaderLinks(props) {
-  const { variant, children, fixed, secondary, onOpen, ...rest } = props;
+  const { secondary, ...rest } = props;
   const history = useHistory();
 
   // Chakra Color Mode
