@@ -119,7 +119,7 @@ src/
 11. **Profile Avatar Edit Icon**: Opens modal to upload new profile photo (client-side preview only, no backend upload)
 
 ### Dashboard Page
-12. **Statistics Cards**: Display static mock data
+12. **Statistics Cards**: Display mock data with animated count-up effect on page load (numbers animate from 0 to final value)
 13. **Charts**: Interactive ApexCharts with hover tooltips
 14. **Projects Table**: Rendered dynamically from mock data array
 15. **Orders Timeline**: Rendered dynamically from mock data array
