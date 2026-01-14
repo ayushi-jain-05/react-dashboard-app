@@ -16,28 +16,28 @@ var dashRoutes = [
     name: "Dashboard",
     icon: <HomeIcon color="inherit" />,
     component: Dashboard,
-    layout: "/admin",
+    layout: "",
   },
   {
     path: "/tables",
     name: "Tables",
     icon: <StatsIcon color="inherit" />,
     component: Dashboard, // Redirects to Dashboard
-    layout: "/admin",
+    layout: "",
   },
   {
     path: "/billing",
     name: "Billing",
     icon: <CreditIcon color="inherit" />,
     component: Dashboard, // Redirects to Dashboard
-    layout: "/admin",
+    layout: "",
   },
   {
     path: "/rtl",
     name: "RTL",
     icon: <SupportIcon color="inherit" />,
     component: Dashboard, // Redirects to Dashboard
-    layout: "/admin",
+    layout: "",
   },
   {
     name: "ACCOUNT PAGES",
@@ -50,7 +50,7 @@ var dashRoutes = [
         icon: <PersonIcon color="inherit" />,
         secondaryNavbar: true,
         component: Profile,
-        layout: "/admin",
+        layout: "",
       },
     ],
   },

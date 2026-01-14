@@ -99,7 +99,7 @@ export default function HeaderLinks(props) {
         _hover={{ bg: "transparent" }}
         _active={{ bg: "transparent" }}
         _focus={{ boxShadow: "none" }}
-        onClick={() => history.push('/admin/profile')}
+        onClick={() => history.push('/profile')}
       >
         Sign In
       </Button>

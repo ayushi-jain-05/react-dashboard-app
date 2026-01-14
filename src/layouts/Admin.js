@@ -20,7 +20,7 @@ export default function Dashboard(props) {
 	const { ...rest } = props;
 	// functions for changing the states from components
 	const getRoute = () => {
-		return window.location.pathname !== '/admin/full-screen-maps';
+		return window.location.pathname !== '/full-screen-maps';
 	};
 	const getActiveRoute = (routes) => {
 		let activeRoute = 'Default Brand Text';
@@ -70,8 +70,8 @@ export default function Dashboard(props) {
 			if (prop.category === 'account') {
 				return getRoutes(prop.views);
 			}
-			if (prop.layout === '/admin') {
-				return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
+			if (prop.layout === '') {
+				return <Route path={prop.path} component={prop.component} key={key} />;
 			} else {
 				return null;
 			}
@@ -107,7 +107,7 @@ export default function Dashboard(props) {
 						<PanelContainer>
 							<Switch>
 								{getRoutes(routes)}
-								<Redirect from='/admin' to='/admin/dashboard' />
+								<Redirect from='/' to='/dashboard' />
 							</Switch>
 						</PanelContainer>
 					</PanelContent>

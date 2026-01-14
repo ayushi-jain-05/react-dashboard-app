@@ -63,14 +63,14 @@ src/
 
 ## Features
 
-### Dashboard Page (`/admin/dashboard`)
+### Dashboard Page (`/dashboard`)
 - Statistics Cards with key metrics
 - Interactive Bar Chart (Active Users)
 - Interactive Line Chart (Sales Overview)
 - Projects Table with progress indicators
 - Orders Timeline
 
-### Profile Page (`/admin/profile`)
+### Profile Page (`/profile`)
 - Profile Header with tab navigation
 - Platform Settings with toggle switches
 - Conversations list with Reply modal

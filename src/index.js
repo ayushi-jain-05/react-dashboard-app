@@ -1,15 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import AdminLayout from "layouts/Admin.js";
 
 ReactDOM.render(
-  <HashRouter>
+  <BrowserRouter>
     <Switch>
-      <Route path={`/admin`} component={AdminLayout} />
-      <Redirect from={`/`} to="/admin/dashboard" />
+      <Route path="/" component={AdminLayout} />
     </Switch>
-  </HashRouter>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
